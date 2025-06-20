@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom CSS from old project */
+
+/* Custom rule for "View Our Work" button to ensure text visibility */
+#home .bg-background.text-white.border-white {
+  color: var(--primary); /* Assuming --primary is defined by Tailwind's default theme or needs to be added if not */
+}
+
+.hero-gradient{background:linear-gradient(135deg,#1e3a8a,#0891b2,#f59e0b)}
+.text-gradient{-webkit-text-fill-color:transparent;background:linear-gradient(135deg,#1e3a8a,#0891b2);-webkit-background-clip:text;background-clip:text}
+.card-hover{transition:all .3s}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px #0000001a}
+.animate-float{animation:6s ease-in-out infinite float}
+@keyframes float{0%,to{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.parallax-bg{background-position:50%;background-repeat:no-repeat;background-size:cover;background-attachment:fixed}
